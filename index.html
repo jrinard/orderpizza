@@ -3,98 +3,72 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Order Pizza</title>
+    <title>The Great Pizza Pie</title>
   </head>
   <body>
     <div class="container">
-      <div id="top">
-      <h1>Order Pizza</h1>
-      </div>
-
       <div class="row">
-        <div class="col-md-6">
-
-          <form>
-            <div class="form-group">
-              <label for="name">Customer Name:</label><br>
-              <input id="name" class="form-control" type="name"></input>
-            </div><br>
-
-            <label for="name">Cheese Type</label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cheeseOption" value="regular" checked>
-                Regular Cheese
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="cheeseOption" value="extra">
-                Extra Cheese
-              </label>
-            </div>
-
-
-            <!-- <label for="name">Toppings</label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="toppingOption" value="pepperoni" checked>
-                Pepperoni
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="toppingOption" value="sausage">
-                Sausage
-              </label>
-            </div> -->
-
-        <label for="name">Toppings</label>
-        <div class="form-group radio">
-          <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
-          <input type="checkbox" name="topping" value="Sausage">Sausage<br>
-        </div>
-
-<!-- single toppings
-            <label for="name">Toppings</label>
-            <div class="radio">
-              <label>
-                <input type="radio" name="toppingOption" value="pepperoni" checked>
-                Pepperoni
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="toppingOption" value="sausage">
-                Sausage
-              </label>
-            </div> -->
-
-
-
-
-            <div class="form-group">
-              <label for="size">Size</label>
-              <select class="form-control" id="size">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn">Order</button>
-          </form>
-
-          <div id="results">
-            <!-- <p>Customer Name: <span class="name"></span></p>
-            <p>New Toppings Include: <span class="toppings"></span></p> -->
-          </div>
-
-        </div><!-- col end -->
-
-      </div>
-    </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div id="top">
+          <div class="banner">The Great Pizza Pie</div>
+        </div> <!-- Top end -->
+      </div><!-- col 1 end -->
+        <div class="col-md-6 col-sm-6 col-xs-6 pull-right">
+          <div id="side">
+            <div id="results">
+            </div><!-- results end -->
+            <h3> We have the best pizza around! </h3>
+          </div><!-- side end -->
+        </div><!-- col2 end -->
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div id="body">
+            <form>
+              <h1>Order Pizza</h1>
+              <div class="form-group">
+                <label for="name">Customer Name:</label><br>
+                <input id="name" class="form-control" type="name"></input>
+              </div><br>
+              <label for="name">Cheese Type</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="cheeseOption" value="regular" checked>Regular Cheese
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="cheeseOption" value="extra">Extra Cheese
+                </label>
+              </div>
+              <label for="name">Toppings</label>
+              <div class="form-group">
+                <input class="check" type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
+                <input class="check" type="checkbox" name="topping" value="Sausage"> Sausage<br>
+                <input class="check" type="checkbox" name="topping" value="Ham"> Ham<br>
+                <input class="check" type="checkbox" name="topping" value="Pineapple"> Pineapple<br>
+                <input class="check" type="checkbox" name="topping" value="Green Peppers"> Green Peppers<br>
+                <input class="check" type="checkbox" name="topping" value="Tomato"> Tomato<br>
+              </div>
+              <div class="form-group">
+                <label for="size">Size</label>
+                <select class="form-control" id="size">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <button type="submit" class="btn">Order</button>
+            </form><!-- form end -->
+          </div><!-- body end -->
+        </div><!-- col2 end -->
+      </div><!-- row2 end -->
+      <div class="row">
+        <div class="col-md-12">
+          <div id ="footer">Copyright by The Great Pizza Guy</div>
+        </div><!--  col3 end -->
+      </div><!-- row end -->
+    </div><!-- Container end -->
   </body>
 </html>

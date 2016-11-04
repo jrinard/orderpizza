@@ -8,24 +8,17 @@ Website offers the user the ability to order a pizza using constructors and prot
 
 ## Specs
 
-  * Allow user to choose extra cheese
+* Allow user to choose extra cheese
 
 * Allow user to choose individual topping
 
 * Allow user to choose multiple toppings
 
-  * Allow user to choose size
+* Allow user to choose size
 
-  * Calculate final Price
+* Calculate final Price
 
-## Execution
-
-* Make a constructor for a pizza with properties
-  * Add properties for Toppings and Size
-
-* Make a prototype method for pizza constructor
-  * Calculate price depending on choices
-
+* Display results for user
 
 
 ## Setup/Installation Requirements
