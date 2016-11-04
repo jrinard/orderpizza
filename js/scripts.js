@@ -1,7 +1,8 @@
 
 //Constructor to build pizza
 
-function Pizza(cheeseX, pepperoni, pineapple, size) {
+function Pizza(name, cheeseX, pepperoni, pineapple, size) {
+  this.name = name;
   this.cheese = cheeseX;
   this.meat = pepperoni; // placeholder to be assigned]
   this.fruit = pineapple;
@@ -20,6 +21,13 @@ Pizza.prototype.pizzaCost = function() {
   } else if (this.pizzaSize === "large") {
     finalPrice += 12;
   }
+    if (this.cheese === "regular"){
+      finalPrice = finalPrice + 0;
+    } else if (this.cheese === "extra"){
+      finalPrice = finalPrice + 1;
+    }
+
+
   console.log("pizzaCost has been set to " + finalPrice);
   return finalPrice;
 };
@@ -27,37 +35,40 @@ Pizza.prototype.pizzaCost = function() {
 // !!! idea for cheese if they pick a topping then push a value to an array.
 // Calculate the length and multiply to affect price.
 // multiple selections with boxes - Transport Survey https://www.learnhowtoprogram.com/intro-to-programming/arrays-looping/gathering-data-with-checkboxes
-var extra = function toppings(price) {
-  var price = 0;
-  if (this.cheese === "extra") {
-    price += 1;  console.log(" Add 1 for extra " + price);
-  } else {
-  }return price;
-
-};
+// var extra = function toppings(price) {
+//   var price = 0;
+//   if (this.cheese === "extra") {
+//     price += 1;  console.log(" Add 1 for extra " + price);
+//   } else {
+//   }return price;
+//
+// };
 
 // user interface
-
 $(document).ready(function(){
   $("form").submit(function(event){
   event.preventDefault();
 
   var extra = 0;
 
+  var inputtedName = $("input#name").val();
   var cheeseAmount = $("input:radio[name=cheeseOption]:checked").val();
   var meatType = $("input:radio[name=meat]:checked").val();
   var veggieType = $("input:radio[name=veggie]:checked").val();
   var sizeSelection = $("#size").val();
 
-  var newPizza = new Pizza(cheeseAmount, meatType, veggieType, sizeSelection)
+  var newPizza = new Pizza(inputtedName,cheeseAmount, meatType, veggieType, sizeSelection)
 
   var finalPrice = newPizza.pizzaCost();
 
   // call toppings?
-
-
-  $("#results").text("Your Pizza will cost $" + finalPrice);
   $("#results").show();
+  $("#results").text(newPizza.name);
+  $("#results").text(newPizza.name + " " +
+
+    "your Pizza will cost $" + finalPrice );
+
+
 
 
   }); // submit end
