@@ -1,0 +1,58 @@
+/** {
+  font-family: 'Raleway', sans-serif;
+}*/
+
+body {
+  margin: 5%;
+  /*background-image: url("../img/bg.jpg");*/
+
+}
+
+h1 {
+  text-align:center;
+  font-size: 3em;
+  color:#000;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.space{
+  width: 200px;
+  height: 200px;
+  border: solid 2.5px #444;
+}
+
+
+#body{
+  margin:auto;
+  width: 640px;
+  height: 640px;
+  background-color: #d0d0d0;
+  border: solid thick #ededed;
+  border-radius: 15px;
+
+}
+
+#board {
+  width: 600px;
+  height: 600px;
+  background-color: #e5e5e5;
+  border:solid 2.5px #444;
+  margin:auto;
+  margin-top: 14px;
+}
+
+
+#results {
+  font-size: 1.4em;
+  margin: 20px;
+  background-color: #eee;
+  border: solid thin #999;
+  padding: 10px;
+  display:none;
+  box-shadow: 4px 3px 5px #777;
+  border-radius: 10px;
+}
