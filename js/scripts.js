@@ -1,10 +1,10 @@
 
 //Constructor to build pizza
 
-function Pizza(name, cheeseX, pepperoni, pineapple, size) {
+function Pizza(name, cheeseX, toppingx, pineapple, size) {
   this.name = name;
   this.cheese = cheeseX;
-  this.meat = pepperoni; // placeholder to be assigned]
+  this.topping = toppingx; // placeholder to be assigned]
   this.fruit = pineapple;
   this.pizzaSize = size;
 }
@@ -26,6 +26,11 @@ Pizza.prototype.pizzaCost = function() {
     } else if (this.cheese === "extra"){
       finalPrice = finalPrice + 1;
     }
+      if (this.topping === "pepperoni"){
+        finalPrice = finalPrice + .5;
+      } else if (this.topping === "sausage"){
+        finalPrice = finalPrice + .5;
+      }
 
 
   console.log("pizzaCost has been set to " + finalPrice);
@@ -48,26 +53,28 @@ Pizza.prototype.pizzaCost = function() {
 $(document).ready(function(){
   $("form").submit(function(event){
   event.preventDefault();
-
+  $("#results").empty();
   var extra = 0;
 
   var inputtedName = $("input#name").val();
   var cheeseAmount = $("input:radio[name=cheeseOption]:checked").val();
-  var meatType = $("input:radio[name=meat]:checked").val();
+  var toppingChoice = $("input:radio[name=toppingOption]:checked").val();
   var veggieType = $("input:radio[name=veggie]:checked").val();
   var sizeSelection = $("#size").val();
 
-  var newPizza = new Pizza(inputtedName,cheeseAmount, meatType, veggieType, sizeSelection)
+  var newPizza = new Pizza(inputtedName,cheeseAmount, toppingChoice, veggieType, sizeSelection)
 
   var finalPrice = newPizza.pizzaCost();
 
   // call toppings?
   $("#results").show();
-  $("#results").text(newPizza.name);
-  $("#results").text(newPizza.name + " " +
-
-    "your Pizza will cost $" + finalPrice );
-
+  $("#results").append("Order Received");
+  $("#results").append("<br>" +  "Toppings Include: ");
+  $("input:checkbox[name=topping]:checked").each(function(){
+    var finalToppingChoice = $(this).val();
+    $('#results').append(finalToppingChoice + " ");
+  });
+$("#results").append("<br>" + newPizza.name + " " + "your pizza will cost $" + finalPrice);
 
 
 
